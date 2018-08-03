@@ -8,10 +8,11 @@ const router = require('./router');
 const mongoose = require('mongoose');
 
 // DB Setup
-mongoose.connect('mongodb://localhost:27017/auth', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/auth', {useNewUrlParser: true});
 // App Setup
 app.use(morgan('combined'));
-app.use(bodyParser.json({ type: '*/*' }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true}));
 router(app);
 
 // Server Setup

@@ -1,0 +1,27 @@
+For start the project at first you need to start in terminal:
+``npm run dev
+in second terminal you mast start
+``mongod
+
+after this you can try to work with server in POSTMAN
+
+for signup user you mast Post on url localhost:3000/signup
+
+{
+	"email": "tyzhnenkoartem@gmail.com",
+	"password": "123"
+}
+
+
+for signin user you mast Post on url localhost:3000/signin
+{
+	"username": "tyzhnenkoartem@gmail.com",
+	"password": "123"
+}
+
+if you will use Get method from  localhost:3000/ || localhost:3000 with token that you have after signup
+you will see  massage {
+                          "hi": "there"
+                      }
+
+if you don't have token you will see error "Unauthorized"
